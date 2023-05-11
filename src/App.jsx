@@ -8,6 +8,7 @@ import Error from "./pages/Error";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
 import Login from "./pages/Login";
+import PostDetail from "./pages/PostDetail";
 const { Footer } = Layout;
 
 function App() {
@@ -47,6 +48,11 @@ function App() {
         {
           path: "about",
           element: <About />,
+          errorElement: <Error />,
+        },
+        {
+          path: "post/:id",
+          element: <PostDetail />,
           errorElement: <Error />,
         },
       ],

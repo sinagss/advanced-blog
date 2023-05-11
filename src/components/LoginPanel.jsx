@@ -1,4 +1,3 @@
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input } from "antd";
 
 const LoginPanel = () => {
@@ -46,7 +45,10 @@ const LoginPanel = () => {
       </Form.Item>
 
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" htmlType="submit">
+        <Button
+          type="primary"
+          htmlType="submit"
+        >
           Submit
         </Button>
       </Form.Item>
