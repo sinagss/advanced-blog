@@ -18,6 +18,7 @@ const Navbar = () => {
           items={[
             { key: "homeKey", label: <NavLink to="/">Home</NavLink> },
             { key: "posts", label: <NavLink to="posts">Posts</NavLink> },
+            { key: "users", label: <NavLink to="users">Users</NavLink> },
             { key: "about", label: <NavLink to="about">About</NavLink> },
           ]}
         />
