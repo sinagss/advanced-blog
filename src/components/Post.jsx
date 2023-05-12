@@ -14,9 +14,7 @@ const Post = ({ title, body }) => {
         <p className="mt-2 text-gray-600">{body}</p>
       </div>
       <div className="fix right-3 mt-4 flex justify-end">
-        <a href="#" className="text-l font-medium text-indigo-500">
-          <Link to="post/:id">Read More</Link>
-        </a>
+          <Link className="text-l font-medium text-indigo-500" to="post/:id">Read More</Link>
       </div>
     </div>
   );
