@@ -1,19 +1,17 @@
-export const users = () => {
-  return (
-    {
-      user: "admin",
-      password: "admin",
-      level: 0,
-    },
-    {
-      user: "user1",
-      password: "user1",
-      level: 1,
-    },
-    {
-      user: "user2",
-      password: "user2",
-      level: 2,
-    }
-  );
-};
+export const users = [
+  {
+    user: "admin",
+    password: "admin",
+    accessLevel: 0,
+  },
+  {
+    user: "user1",
+    password: "user1",
+    accessLevel: 1,
+  },
+  {
+    user: "user2",
+    password: "user2",
+    accessLevel: 2,
+  },
+];
