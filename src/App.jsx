@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Posts from "./pages/Posts";
 import Login from "./pages/Login";
 import PostDetail from "./pages/PostDetail";
+import AuthProvider from "./context/AuthProvider";
+import Users from "./pages/Users";
 const { Footer } = Layout;
 
 function App() {
@@ -46,6 +48,11 @@ function App() {
           errorElement: <Error />,
         },
         {
+          path: "users",
+          element: <Users />,
+          errorElement: <Error />,
+        },
+        {
           path: "about",
           element: <About />,
           errorElement: <Error />,
@@ -65,9 +72,11 @@ function App() {
   ]);
 
   return (
-    <ConfigProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ConfigProvider>
+    <AuthProvider>
+      <ConfigProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ConfigProvider>
+    </AuthProvider>
   );
 }
 
