@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Table } from "antd";
 import { usePersistedState } from "../hooks/usePersistedState";
 import storageKeys from "../constants/storageKeys";
@@ -41,8 +41,12 @@ const Users = () => {
   useEffect(() => {
     if (!isCached) {
       getUsers().then((data) => {
-        setUsers(users);
+        const modData = data.map((item) => {
+          return { key: item.id, ...item };
+        });
+        setUsers(modData);
       });
+      console.log(users);
       setLoading(false);
     } else {
       setLoading(false);
@@ -58,13 +62,23 @@ const Users = () => {
         columns={columns}
         expandable={{
           expandedRowRender: (record) => (
-            <p
-              style={{
-                margin: 0,
-              }}
-            >
-              {record.email}
-            </p>
+            <>
+              <p
+                style={{
+                  margin: 0,
+                }}
+              >
+                Email: {record.email}
+              </p>
+              <p>
+                Address:{" "}
+                {record.address.city +
+                  ", " +
+                  record.address.street +
+                  "," +
+                  record.address.suite}
+              </p>
+            </>
           ),
           rowExpandable: (record) => record.name !== "Not Expandable",
         }}
