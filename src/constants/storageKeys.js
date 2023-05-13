@@ -3,6 +3,9 @@ const storageKeys = {
   posts: "posts",
   darkMode: "darkMode",
   isChashed: "isChashed",
+  isLogedin: "isLogedin",
+  username: "username",
+  accessLevel: "accessLevel",
 };
 
 export default storageKeys;
