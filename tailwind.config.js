@@ -10,6 +10,7 @@ module.exports = {
       backgroundColor: {
         primary: "#eeedf5",
         primaryLight: "#f8f7fc",
+        secondary: "#6c63ff",
       },
       animation: {
         text: "text 5s ease infinite",
