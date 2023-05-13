@@ -1,7 +1,6 @@
-import { Layout, Menu, Button } from "antd";
-import { LoginOutlined } from "@ant-design/icons";
+import { Layout, Menu } from "antd";
 import logo from "../../assets/undraw_cabin.svg";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const { Header } = Layout;
 
 const Navbar = () => {
@@ -18,17 +17,13 @@ const Navbar = () => {
           items={[
             { key: "homeKey", label: <NavLink to="/">Home</NavLink> },
             { key: "posts", label: <NavLink to="posts">Posts</NavLink> },
-            { key: "users", label: <NavLink to="users">Users</NavLink> },
+            {
+              key: "users",
+              label: <NavLink to="users">Users</NavLink>,
+            },
             { key: "about", label: <NavLink to="about">About</NavLink> },
           ]}
         />
-        <Button
-          type="primary"
-          icon={<LoginOutlined />}
-          className="absolute right-5 flex items-center gap-2"
-        >
-          <Link to="login">Login</Link>
-        </Button>
       </Header>
     </Layout>
   );
