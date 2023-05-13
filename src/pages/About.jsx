@@ -3,7 +3,7 @@ import ScrollToTop from "../components/UI/ScrollToTop";
 const About = () => {
   return (
     <div
-      className="flex w-full flex-col items-center justify-center overflow-hidden bg-primary px-10 py-10 
+      className="flex w-full h-screen flex-col items-center justify-center overflow-hidden bg-primary px-10 py-10 
     md:px-52"
     >
       <ScrollToTop />
