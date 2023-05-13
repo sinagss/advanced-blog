@@ -9,7 +9,25 @@ module.exports = {
       },
       backgroundColor: {
         primary: "#eeedf5",
-        primaryLight: "#f8f7fc"
+        primaryLight: "#f8f7fc",
+      },
+      animation: {
+        text: "text 5s ease infinite",
+      },
+      keyframes: {
+        text: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
+      },
+      fontFamily: {
+        cursive: ["Homemade Apple", "Apple Chancery"],
       },
     },
   },
